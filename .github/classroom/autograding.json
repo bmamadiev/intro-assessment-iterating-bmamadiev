@@ -1,0 +1,64 @@
+{
+  "tests": [
+    {
+      "name": "Intro Command",
+      "setup": "",
+      "run": "java src/Main.java",
+      "input": "Hello! Welcome to Kenzie.  My name is Robert, and I'm here with my friend Waldo.  Have you met waldo?",
+      "output": "Text Analyzer found\r\nTotal [a]: 5\r\nTotal [e]: 12\r\nTotal [i]: 5\r\nTotal [o]: 7\r\nTotal [u]: 1\r\nTotal periods: 2\r\nTotal commas: 1\r\nTotal exclamation point: 1\r\nTotal question marks: 1\r\nTotal punctuation: 5\r\nTotal characters: 101\r\nTotal words: 19\r\nThe longest word: Welcome\r\nThe shortest word: to\r\nThe last three words: you,met,waldo",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Tiny Input",
+      "setup": "",
+      "run": "java src/Main.java",
+      "input": "tiny input",
+      "output": "Text Analyzer found\r\nTotal [a]: 0\r\nTotal [e]: 0\r\nTotal [i]: 2\r\nTotal [o]: 0\r\nTotal [u]: 1\r\nTotal periods: 0\r\nTotal commas: 0\r\nTotal exclamation point: 0\r\nTotal question marks: 0\r\nTotal punctuation: 0\r\nTotal characters: 10\r\nTotal words: 2\r\nThe longest word: input\r\nThe shortest word: tiny\r\nThe last three words: tiny,input",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Encased In Punctuation",
+      "setup": "",
+      "run": "java src/Main.java",
+      "input": "!word! ?word?",
+      "output": "Text Analyzer found\r\nTotal [a]: 0\r\nTotal [e]: 0\r\nTotal [i]: 0\r\nTotal [o]: 2\r\nTotal [u]: 0\r\nTotal periods: 0\r\nTotal commas: 0\r\nTotal exclamation point: 2\r\nTotal question marks: 2\r\nTotal punctuation: 4\r\nTotal characters: 13\r\nTotal words: 2\r\nThe longest word: word\r\nThe shortest word: word\r\nThe last three words: word,word",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Punctuation In The Middle",
+      "setup": "",
+      "run": "java src/Main.java",
+      "input": "!word'dnt?",
+      "output": "Text Analyzer found\r\nTotal [a]: 0\r\nTotal [e]: 0\r\nTotal [i]: 0\r\nTotal [o]: 1\r\nTotal [u]: 0\r\nTotal periods: 0\r\nTotal commas: 0\r\nTotal exclamation point: 1\r\nTotal question marks: 1\r\nTotal punctuation: 2\r\nTotal characters: 10\r\nTotal words: 1\r\nThe longest word: word'dnt\r\nThe shortest word: word'dnt\r\nThe last three words: word'dnt",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Did They Do Spaces Right?",
+      "setup": "",
+      "run": "java src/Main.java",
+      "input": "did they do spaces right?",
+      "output": "Text Analyzer found\r\nTotal [a]: 1\r\nTotal [e]: 2\r\nTotal [i]: 2\r\nTotal [o]: 1\r\nTotal [u]: 0\r\nTotal periods: 0\r\nTotal commas: 0\r\nTotal exclamation point: 0\r\nTotal question marks: 1\r\nTotal punctuation: 1\r\nTotal characters: 25\r\nTotal words: 5\r\nThe longest word: spaces\r\nThe shortest word: do\r\nThe last three words: do,spaces,right",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Chaotic Punctuation",
+      "setup": "",
+      "run": "java src/Main.java",
+      "input": "!!!!??!?!?!??!!?!?...,,,",
+      "output": "Text Analyzer found\r\nTotal [a]: 0\r\nTotal [e]: 0\r\nTotal [i]: 0\r\nTotal [o]: 0\r\nTotal [u]: 0\r\nTotal periods: 3\r\nTotal commas: 3\r\nTotal exclamation point: 10\r\nTotal question marks: 8\r\nTotal punctuation: 24\r\nTotal characters: 24\r\nTotal words: 1\r\nThe longest word: \r\nThe shortest word: \r\nThe last three words:",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
